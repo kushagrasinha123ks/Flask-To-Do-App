@@ -42,6 +42,9 @@ A simple and clean ToDo web application built with Flask, featuring a SQLite bac
 
 ## Preview
 
+![Flask To-Do Pipeline Overview](https://dl.dropboxusercontent.com/scl/fi/ktwibcwgztapbtepmom9i/flask-to-do-pipeline-overview.png?rlkey=y1s4h6y5q8ecbkq22k2hqz6l5&st=hv5y4swd&dl=0?raw=1)
+
+
 ![Flask To-Do App CI/CD](https://dl.dropboxusercontent.com/scl/fi/nhagw5s9y2dvq4n5syodq/flask-to-do-app-cicd.png?rlkey=u54xl9dlgo770rro9lqu8y38g&st=n08fv15e&dl=0?raw=1)
 
 
