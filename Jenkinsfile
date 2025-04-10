@@ -24,22 +24,14 @@ pipeline {
             }
         }
 
-        stage('Login to Docker Hub') {
-            steps {
-                script {
-                    docker.withRegistry('https://index.docker.io/v1/', "${DOCKERHUB_CREDENTIALS}") {
-                        echo "Logged in to DockerHub"
-                    }
-                }
-            }
-        }
-
         stage('Push Docker Image') {
             steps {
                 script {
                     def tag = "v${BUILD_NUMBER}"
-                    sh "docker push $IMAGE_NAME:$tag"
-                    sh "docker push $IMAGE_NAME:latest"
+                    docker.withRegistry('https://index.docker.io/v1/', "${DOCKERHUB_CREDENTIALS}") {
+                        sh "docker push $IMAGE_NAME:$tag"
+                        sh "docker push $IMAGE_NAME:latest"
+                    }
                 }
             }
         }
